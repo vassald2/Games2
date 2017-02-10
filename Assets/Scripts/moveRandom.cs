@@ -32,16 +32,14 @@ public class moveRandom : MonoBehaviour {
 		if (timeLeft < 0) {
 			t = Random.Range (1, 3);
 			timeLeft = 2.0f;
-			//Debug.Log (t);
+		
 		}
 
 
 		if (t == 1) {
 			if (rend.enabled == false) {
 				rend.enabled = true;
-				Debug.Log (t);
 				if (front.transform.position.y > 0) {
-					//Debug.Log ("Y is greater then 0");
 
 
 
@@ -60,44 +58,15 @@ public class moveRandom : MonoBehaviour {
 				rend = GetComponent<Renderer> ();
 				rend.enabled = true;
 				if (front.transform.position.y > 0) {
-					//Debug.Log ("Y is greater then 0");
+
 
 				}
-				Debug.Log (t);
 				float step = speed * Time.deltaTime;
 				transform.position = Vector3.MoveTowards (transform.position, Loc2.position, step);
 
 			}
 			rend.enabled = true;
 		}
-		/*
-
-		if (t == 3) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc3.position, step);
-		}
-		if (t == 4 ) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc4.position, step);
-		}
-		if (t == 5 ) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc5.position, step);
-		}
-
-	*/
 
 	}
 
