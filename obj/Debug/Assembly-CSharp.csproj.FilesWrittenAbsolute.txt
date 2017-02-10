@@ -16,6 +16,7 @@
 /Users/josephratner/Desktop/Oculus Rift/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/josephratner/Desktop/Oculus Rift/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/josephratner/Desktop/Oculus Rift/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+<<<<<<< HEAD
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/obj/Debug/Assembly-CSharp.dll
@@ -34,3 +35,5 @@
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/josephratner/Desktop/TCNJ/Spring2017/GamesII/Games2-master/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+=======
+>>>>>>> 8d4d51b4d6f5f318ff0c17af09da188be3a94272
