@@ -63,6 +63,7 @@ public class moveRandom : MonoBehaviour {
 					//Debug.Log ("Y is greater then 0");
 
 				}
+
 				Debug.Log (t);
 				float step = speed * Time.deltaTime;
 				transform.position = Vector3.MoveTowards (transform.position, Loc2.position, step);
@@ -70,34 +71,7 @@ public class moveRandom : MonoBehaviour {
 			}
 			rend.enabled = true;
 		}
-		/*
 
-		if (t == 3) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc3.position, step);
-		}
-		if (t == 4 ) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc4.position, step);
-		}
-		if (t == 5 ) {
-			if(front.transform.position.y > 0){
-				Debug.Log ("Y is greater then 0");
-			}
-			Debug.Log (t);
-			float step = speed * Time.deltaTime;
-			transform.position = Vector3.MoveTowards(transform.position, Loc5.position, step);
-		}
-
-	*/
 
 	}
 

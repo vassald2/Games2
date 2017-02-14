@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Ebutton.cs" />
      <Compile Include="Assets\Scripts\moveRandom.cs" />
      <Compile Include="Assets\Scripts\speak.cs" />
      <Compile Include="Assets\Scripts\walk.cs" />
