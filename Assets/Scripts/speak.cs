@@ -3,18 +3,30 @@ using System.Collections;
 
 public class speak : MonoBehaviour {
 
+
+
+
+
+	public GameObject text; 
+	private bool isShowing;
+
 	bool inCircle = false;
 
 	public GameObject eButton;
-	public GameObject text;
-	private Renderer rendText;
+
 	private Renderer rendE;
+	public GameObject plane;
+	private MeshRenderer rendPlane;
+
 	void Start(){
 		rendE = eButton.GetComponent<Renderer>();
 		rendE.enabled = false;
 	
-		rendText = text.GetComponent<Renderer>();
-		rendText.enabled = false;
+		text.SetActive (false);
+		//isShowing = !isShowing;
+
+		rendPlane = plane.GetComponent<MeshRenderer>();
+		rendPlane.enabled = false;
 	}
 
 
@@ -22,9 +34,12 @@ public class speak : MonoBehaviour {
 	void Update (){
 		if (inCircle == true) {
 
-			if(Input.GetKeyDown("space")) {
-				Debug.Log ("space key was pressed");
+			if (Input.GetKeyDown(KeyCode.E)) {
+				Debug.Log("e was pressed");
 
+				text.SetActive(true);
+				rendPlane.enabled = true;
+						
 			}
 		}
 
@@ -37,13 +52,9 @@ public class speak : MonoBehaviour {
 		if(other.gameObject.tag == "Player")
 		{
 			rendE.enabled = true;
+
 			print ("inside radius");
-			if (Input.GetKeyDown ("e")) {
-				Debug.Log("e was pressed");
-				rendText.enabled = false;
-				
-				
-			}
+
 		}
 
 	}
@@ -53,6 +64,9 @@ public class speak : MonoBehaviour {
 		inCircle = false;
 		if (other.gameObject.tag == "Player") {
 			print ("outside radius");
+			rendPlane.enabled = false;
+			text.SetActive(false);
+
 
 		}
 	}
