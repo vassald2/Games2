@@ -3,30 +3,71 @@ using System.Collections;
 
 public class speak : MonoBehaviour {
 
+
+
+
+
+	public GameObject text; 
+	private bool isShowing;
+
 	bool inCircle = false;
+
+	public GameObject eButton;
+
+	private Renderer rendE;
+	public GameObject plane;
+	private MeshRenderer rendPlane;
+
+	void Start(){
+		rendE = eButton.GetComponent<Renderer>();
+		rendE.enabled = false;
+	
+		text.SetActive (false);
+		//isShowing = !isShowing;
+
+		rendPlane = plane.GetComponent<MeshRenderer>();
+		rendPlane.enabled = false;
+	}
+
 
 
 	void Update (){
-		
-	}
+		if (inCircle == true) {
 
-	void OnTriggerEnter2D(Collider2D other)
-	{
-		inCircle = true;
-		if(other.gameObject.tag == "Player")
-		{
-			print ("inside radius");
-			if (Input.GetKeyDown ("space")) {
-				Debug.Log ("space key was pressed");
+			if (Input.GetKeyDown(KeyCode.E)) {
+				Debug.Log("e was pressed");
+
+				text.SetActive(true);
+				rendPlane.enabled = true;
+						
 			}
 		}
 
 	}
 
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		
+		inCircle = true;
+		if(other.gameObject.tag == "Player")
+		{
+			rendE.enabled = true;
+
+			print ("inside radius");
+
+		}
+
+	}
+
 	void OnTriggerExit2D(Collider2D other){
+		rendE.enabled = false;
 		inCircle = false;
 		if (other.gameObject.tag == "Player") {
-		
+			print ("outside radius");
+			rendPlane.enabled = false;
+			text.SetActive(false);
+
+
 		}
 	}
 }

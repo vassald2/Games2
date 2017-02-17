@@ -5,7 +5,7 @@ public class walk : MonoBehaviour {
 
     Animator myAnimator;
 
-    public bool animation_bool;
+   // public bool animation_bool;
 	// Use this for initialization
 	void Start () {
         myAnimator = this.GetComponent<Animator>();
