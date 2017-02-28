@@ -4,9 +4,16 @@ using System.Collections;
 public class walk : MonoBehaviour {
 
     Animator myAnimator;
+	private AudioSource audio;
+	public AudioClip au_leafCrunch;
+
+
 
    // public bool animation_bool;
 	// Use this for initialization
+	void Awake(){
+		audio = GetComponent<AudioSource> ();
+	}
 	void Start () {
         myAnimator = this.GetComponent<Animator>();
 
@@ -23,22 +30,46 @@ public class walk : MonoBehaviour {
         myAnimator.SetBool("GoRight", right);
         myAnimator.SetBool("GoDown", down);
 
-        if (Input.GetKey (KeyCode.W)) {
+		if (Input.GetKey (KeyCode.W)) {
             //Animation anim = GetComponent<Animation>();
             //animation.Play("walk");
             transform.Translate (Vector3.up * 3);
+			//source.PlayOneShot (au_leafCrunch, 1f);
+			if (!audio.isPlaying) {
+				walkOnLeaves ();
+			}
 		}
 	
 		if (Input.GetKey (KeyCode.A)) {
             transform.Translate (Vector3.left * 3);
+			//source.PlayOneShot (au_leafCrunch, 1f);
+			if (!audio.isPlaying) {
+				walkOnLeaves ();
+			}
 
 		}
 		if (Input.GetKey (KeyCode.S)) {
             transform.Translate (Vector3.down * 3);
+			//source.PlayOneShot (au_leafCrunch, 1f);
+			if (!audio.isPlaying) {
+				walkOnLeaves ();
+			}
 		}
 
 		if (Input.GetKey (KeyCode.D)) {
             transform.Translate (Vector3.right * 3);
+			//source.PlayOneShot (au_leafCrunch, 1f);
+			if (!audio.isPlaying) {
+				walkOnLeaves ();
+			}
 		}
+	}
+
+	void walkOnLeaves(){
+		audio.clip = au_leafCrunch;
+		audio.PlayOneShot(au_leafCrunch);
+
+		//audio.Play();
+
 	}
 }

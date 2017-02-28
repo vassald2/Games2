@@ -23,7 +23,7 @@ public class speak : MonoBehaviour {
 		rendE.enabled = false;
 	
 		text.SetActive (false);
-		//isShowing = !isShowing;
+	
 
 		rendPlane = plane.GetComponent<MeshRenderer>();
 		rendPlane.enabled = false;
@@ -45,7 +45,7 @@ public class speak : MonoBehaviour {
 
 	}
 
-	void OnTriggerEnter2D(Collider2D other)
+	void OnTriggerEnter(Collider other)
 	{
 		
 		inCircle = true;
@@ -59,7 +59,7 @@ public class speak : MonoBehaviour {
 
 	}
 
-	void OnTriggerExit2D(Collider2D other){
+	void OnTriggerExit(Collider other){
 		rendE.enabled = false;
 		inCircle = false;
 		if (other.gameObject.tag == "Player") {
