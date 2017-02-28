@@ -1,11 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/speak.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/VillageToMainPathTele.cs">
     <Files>
-      <File FileName="Assets/Scripts/moveRandom.cs" Line="52" Column="5" />
-      <File FileName="Assets/Scripts/walk.cs" Line="8" Column="6" />
-      <File FileName="Assets/Scripts/speak.cs" Line="62" Column="20" />
+      <File FileName="Assets/Scripts/speak.cs" Line="65" Column="42" />
+      <File FileName="Assets/Scripts/walk.cs" Line="54" Column="1" />
+      <File FileName="Assets/Scripts/moveRandom.cs" Line="1" Column="1" />
       <File FileName="Assets/TileDraw/Scripts/Assets/TileSet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/BeachToVilliageTele.cs" Line="19" Column="32" />
+      <File FileName="Assets/Scripts/VillageToBeachTele.cs" Line="4" Column="28" />
+      <File FileName="Assets/Scripts/MainPathToWrongTele.cs" Line="15" Column="2" />
+      <File FileName="Assets/Scripts/VillageToMainPathTele.cs" Line="19" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
