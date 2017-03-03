@@ -16,7 +16,7 @@ public class walk : MonoBehaviour {
 	void Awake(){
 		audio = GetComponent<AudioSource> ();
         rb = GetComponent<Rigidbody>();
-        speed = 30;
+        speed = 100;
 	}
 	void Start () {
         myAnimator = this.GetComponent<Animator>();
