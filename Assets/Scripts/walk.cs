@@ -6,17 +6,21 @@ public class walk : MonoBehaviour {
     Animator myAnimator;
 	private AudioSource audio;
 	public AudioClip au_leafCrunch;
-
+    private Rigidbody rb;
+    int speed;
+    Vector3 playerMove;
 
 
    // public bool animation_bool;
 	// Use this for initialization
 	void Awake(){
 		audio = GetComponent<AudioSource> ();
+        rb = GetComponent<Rigidbody>();
+        speed = 30;
 	}
 	void Start () {
         myAnimator = this.GetComponent<Animator>();
-
+        playerMove = new Vector3(0, 0, 0);
     }
 	
 	// Update is called once per frame
@@ -31,39 +35,53 @@ public class walk : MonoBehaviour {
         myAnimator.SetBool("GoDown", down);
 
 		if (Input.GetKey (KeyCode.W)) {
-            //Animation anim = GetComponent<Animation>();
-            //animation.Play("walk");
-            transform.Translate (Vector3.up * 3);
-			//source.PlayOneShot (au_leafCrunch, 1f);
+            playerMove.y = 3 * speed;
+            rb.velocity = playerMove;
 			if (!audio.isPlaying) {
 				walkOnLeaves ();
 			}
 		}
-	
-		if (Input.GetKey (KeyCode.A)) {
-            transform.Translate (Vector3.left * 3);
-			//source.PlayOneShot (au_leafCrunch, 1f);
-			if (!audio.isPlaying) {
+        else if (Input.GetKeyUp(KeyCode.W)) {
+            playerMove.y = 0;
+            rb.velocity = playerMove;
+        }
+
+        if (Input.GetKey (KeyCode.A)) {
+            playerMove.x = -3 * speed;
+            rb.velocity = playerMove;
+            if (!audio.isPlaying) {
 				walkOnLeaves ();
 			}
 
 		}
+        else if(Input.GetKeyUp(KeyCode.A)){
+            playerMove.x = 0;
+            rb.velocity = playerMove;
+        }
 		if (Input.GetKey (KeyCode.S)) {
-            transform.Translate (Vector3.down * 3);
-			//source.PlayOneShot (au_leafCrunch, 1f);
-			if (!audio.isPlaying) {
+            playerMove.y = -3 * speed;
+            rb.velocity = playerMove;
+            if (!audio.isPlaying) {
 				walkOnLeaves ();
 			}
 		}
+        else if (Input.GetKeyUp(KeyCode.S)) {
+            playerMove.y = 0;
+            rb.velocity = playerMove;
+        }
 
-		if (Input.GetKey (KeyCode.D)) {
-            transform.Translate (Vector3.right * 3);
-			//source.PlayOneShot (au_leafCrunch, 1f);
-			if (!audio.isPlaying) {
+        if (Input.GetKey (KeyCode.D)) {
+            playerMove.x = 3 * speed;
+            rb.velocity = playerMove;
+            if (!audio.isPlaying) {
 				walkOnLeaves ();
 			}
 		}
-	}
+        else if (Input.GetKeyUp(KeyCode.D)) {
+            playerMove.x = 0;
+            rb.velocity = playerMove;
+        }
+    }
 
 	void walkOnLeaves(){
 		audio.clip = au_leafCrunch;
