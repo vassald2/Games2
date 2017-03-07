@@ -19,7 +19,7 @@ public class BeachToVilliageTele : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-            AutoFade.LoadLevel("Village", 2, 1, Color.black);
+            AutoFade.LoadLevel("Village", 1, 1, Color.black);
         }
 	}
 }

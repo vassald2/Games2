@@ -16,7 +16,7 @@ public class MainPathToMainPath2Tele : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Application.LoadLevel ("MainPath2"); 
-		}
+            AutoFade.LoadLevel("MainPath2", 2, 1, Color.black);
+        }
 	}
 }

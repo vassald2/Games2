@@ -13,12 +13,15 @@ public class walk : MonoBehaviour {
 	Vector3 playerMove;
 
 
+
+
 	// public bool animation_bool;
 	// Use this for initialization
 	void Awake(){
 		audio = GetComponent<AudioSource> ();
 		rb = GetComponent<Rigidbody>();
 		speed = 100;
+ 
 	}
 	void Start () {
 		myAnimator = this.GetComponent<Animator>();
@@ -89,7 +92,7 @@ public class walk : MonoBehaviour {
 		audio.clip = au_leafCrunch;
 		audio.PlayOneShot(au_leafCrunch);
 
-		//audio.Play();
-
 	}
+
+
 }
