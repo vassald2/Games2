@@ -46,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\BeachToVilliageTele.cs" />
+     <Compile Include="Assets\Scripts\MainPathToMainPath2Tele.cs" />
      <Compile Include="Assets\Scripts\MainPathToWrongTele.cs" />
      <Compile Include="Assets\Scripts\VillageToBeachTele.cs" />
      <Compile Include="Assets\Scripts\VillageToMainPathTele.cs" />
+     <Compile Include="Assets\Scripts\beastieCollision.cs" />
      <Compile Include="Assets\Scripts\introToBeachTele.cs" />
      <Compile Include="Assets\Scripts\moveRandom.cs" />
      <Compile Include="Assets\Scripts\speak.cs" />
