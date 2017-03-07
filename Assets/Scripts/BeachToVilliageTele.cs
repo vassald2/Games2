@@ -3,6 +3,9 @@ using System.Collections;
 
 public class BeachToVilliageTele : MonoBehaviour {
 
+
+    void Awake() {
+    }
 	// Use this for initialization
 	void Start () {
 	
@@ -16,7 +19,7 @@ public class BeachToVilliageTele : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Application.LoadLevel ("Village"); 
-		}
+            AutoFade.LoadLevel("Village", 2, 1, Color.black);
+        }
 	}
 }
