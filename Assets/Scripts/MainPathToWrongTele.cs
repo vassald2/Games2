@@ -16,7 +16,7 @@ public class MainPathToWrongTele : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Application.LoadLevel ("MockScene"); 
+            AutoFade.LoadLevel("MockScene", 1, 1, Color.black);
 		}
 	}
 }

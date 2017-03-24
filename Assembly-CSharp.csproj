@@ -45,14 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AutoFade.cs" />
      <Compile Include="Assets\Scripts\BeachToVilliageTele.cs" />
+     <Compile Include="Assets\Scripts\ChangeIntroPics.cs" />
+     <Compile Include="Assets\Scripts\MainPath2ToMainPathTele.cs" />
      <Compile Include="Assets\Scripts\MainPathToMainPath2Tele.cs" />
      <Compile Include="Assets\Scripts\MainPathToWrongTele.cs" />
      <Compile Include="Assets\Scripts\VillageToBeachTele.cs" />
      <Compile Include="Assets\Scripts\VillageToMainPathTele.cs" />
+     <Compile Include="Assets\Scripts\beachLoad.cs" />
      <Compile Include="Assets\Scripts\beastieCollision.cs" />
      <Compile Include="Assets\Scripts\introToBeachTele.cs" />
      <Compile Include="Assets\Scripts\moveRandom.cs" />
+     <Compile Include="Assets\Scripts\spawnPlaceHolder.cs" />
      <Compile Include="Assets\Scripts\speak.cs" />
      <Compile Include="Assets\Scripts\walk.cs" />
      <Compile Include="Assets\TileDraw\Scripts\Assets\Entity.cs" />
@@ -69,6 +74,7 @@
      <Compile Include="Assets\TileDraw\Scripts\Util\CreatePlane.cs" />
      <Compile Include="Assets\TileDraw\Scripts\Util\Enums.cs" />
      <Compile Include="Assets\TileDraw\Scripts\Util\Util.cs" />
+     <None Include="Assets\Resources\Plane_No_zTest.shader" />
      <None Include="Assets\TileDraw\readme.txt" />
  <Reference Include="UnityEngine.Networking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
