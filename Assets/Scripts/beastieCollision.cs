@@ -3,6 +3,8 @@ using System.Collections;
 
 public class beastieCollision : MonoBehaviour {
 
+	public GameObject rightBush;
+	public GameObject leftBush;
 	bool inCircle = false;
 	private Renderer rendX;
 	public GameObject xButton;
@@ -19,6 +21,8 @@ public class beastieCollision : MonoBehaviour {
 			if (Input.GetKeyDown(KeyCode.X)) {
 				Debug.Log("x was pressed");
 				Destroy (gameObject);
+				rightBush.transform.Translate(120, 0, 0);
+				leftBush.transform.Translate(-100, 0, 0);
 
 			}
 		}

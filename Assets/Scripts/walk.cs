@@ -30,10 +30,10 @@ public class walk : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		bool left = Input.GetKey(KeyCode.A);
-		bool up = Input.GetKey(KeyCode.W);
-		bool down = Input.GetKey(KeyCode.S);
-		bool right = Input.GetKey(KeyCode.D);
+		bool left = Input.GetKey(KeyCode.A) || Input.GetKey("left");
+		bool up = Input.GetKey(KeyCode.W) || Input.GetKey("up");
+		bool down = Input.GetKey(KeyCode.S) || Input.GetKey("down");
+		bool right = Input.GetKey(KeyCode.D) || Input.GetKey("right");
 		myAnimator.SetBool("GoUp", up);
 		myAnimator.SetBool("GoLeft", left);
 		myAnimator.SetBool("GoRight", right);
@@ -59,7 +59,7 @@ public class walk : MonoBehaviour {
 			}
 
 		}
-		else if(Input.GetKeyUp(KeyCode.A)){
+		else if(Input.GetKeyUp(KeyCode.A) || Input.GetKey("left")){
 			playerMove.x = 0;
 			rb.velocity = playerMove;
 		}

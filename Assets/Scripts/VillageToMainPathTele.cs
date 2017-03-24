@@ -16,7 +16,7 @@ public class VillageToMainPathTele : MonoBehaviour {
 	void OnTriggerEnter (Collider other)
 	{
 		if (other.gameObject.tag == "Player") {
-			Application.LoadLevel ("MainPath"); 
+            AutoFade.LoadLevel("MainPath", 1, 1, Color.black);
 		}
 	}
 }
